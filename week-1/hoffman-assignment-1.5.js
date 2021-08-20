@@ -9,12 +9,13 @@ Link to GitHub repository: https://github.com/lucash0331/web-340
 */
 
 
-
+// Including the HTTP module
 const http = require('http');
 
+//create a server object:
 function processRequest(req, res) {
    
-  const body = 'I hope this assignment earns me an A!';
+  const body = 'I hope this assignment earns me an A!';//Write a response to the client 
 
     const contentLength = body.length;
 
@@ -26,10 +27,10 @@ function processRequest(req, res) {
 
   })
 
-  res.end(body);
+  res.end(body);//End the response 
 
 }
 
-const s = http.createServer(processRequest);
+const s = http.createServer(processRequest); 
 
-s.listen(8080);
+s.listen(8080);// The server object listens on port 8080
