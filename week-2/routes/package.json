@@ -1,0 +1,8 @@
+{
+  "name": "routes",
+  "author": "Lucas Hoffman",
+  "private": "true",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
