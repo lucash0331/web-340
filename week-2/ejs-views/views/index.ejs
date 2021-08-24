@@ -1,0 +1,58 @@
+<!--
+=============================================
+Title: index.ejs
+Author: Lucas Hoffman
+Date: 8/22/2021
+Description: Index page for assignment 2.4
+Link to GitHub repository: https://github.com/lucash0331/web-340
+=============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>EJS-Views app</title>
+
+</head>
+
+<body class="container">
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Content for the main div -->
+<div role="main" class="container">
+    <br/>
+    <br/>
+
+    <!-- header for EJS views example -->
+    <h2>EJS Views Example</h2>
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="alert alert-success" role="alert">
+              <strong>Message: </strong>
+              <span><%= firstName + " " + lastName + ", " + address %></span>
+          </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
