@@ -11,7 +11,7 @@ const express = require('express');
 const http = require('http');
 const logger = require('morgan');
 
-// Assign express object to app variable & process on port 3000
+// Assign express object to app variable
 let app = express();
 
 // Set up our logger
