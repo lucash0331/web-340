@@ -6,7 +6,7 @@
     Link to GitHub repository: https://github.com/lucash0331/web-340
  */
 
-// Require statements for out required libraries
+// Require statements for our required libraries
 var express = require('express');
 var http = require('http');
 var path = require('path');
