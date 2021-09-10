@@ -1,3 +1,11 @@
+/*
+Title: hoffman-exercise-5.2.js
+Author: Lucas Hoffman
+Date: 9/10/2021
+Description: Content for  Assignment 5.2.js
+Link to GitHub repository: https://github.com/lucash0331/web-340
+*/
+
 // Requires
 var express = require('express');
 var http = require('http');
