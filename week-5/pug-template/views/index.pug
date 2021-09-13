@@ -1,0 +1,48 @@
+<!--
+  Title: index.pug
+  Author: Lucas Hoffman
+  Date: 12 September 2021
+  Description: index.pug for Exercise 5.3 
+  Reference: https://www.w3schools.com/whatis/whatis_bootstrap.asp
+  link to Github repository: https://github.com/lucash0331/web-340
+-->
+// Site title and  links for the page
+html 
+   head 
+      title Exercise 5.3 Pug template Example 
+      link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css")
+   body 
+   // navbar content 
+      nav.navbar.navbar-dark.bg-dark.navbar-expand-sm 
+        ul.navbar.nav 
+          li.nav-item 
+            a.nav-link(href='#') Home 
+            li.nav-item 
+            a.nav-link(href='#') About 
+            li.nav-item 
+            a.nav-link(href='#') Contact us 
+
+    br
+    br
+    
+    div.container
+        div.row
+            div.col-md-12
+                h2 Exercise 5.3 - Pug Templates
+                p.alert.alert-success= message  
+         
+// Paragraphs Section for the page
+.container
+  .row
+    .col-sm-4
+      h3 Paragraph 1
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .col-sm-4
+      h3 Paragraph 2
+      p
+        | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    .col-sm-4
+      h3 Paragraph 3
+      p
+        | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
