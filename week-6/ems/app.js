@@ -1,5 +1,5 @@
 /*
-Title: app.js
+Title: Exercise 6.4 - Web 340
 Author: Lucas Hoffman
 Date: 09/19/2021
 Description: App.js file for assignment 6.4
