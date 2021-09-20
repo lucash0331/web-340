@@ -1,0 +1,18 @@
+/*
+Title: theme.css
+Author: Lucas Hoffman
+Date: 09/19/2021
+Description: CSS file for ems assignment 
+*/
+
+body {
+    background-color: #add8e6;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+  }
