@@ -1,0 +1,27 @@
+/*
+============================================
+; Title: hoffman-exercise-7.3
+; Author: Lucas Hoffman
+; Date: September 25, 2021
+; Description: Content for exercise 7.3
+;===========================================
+*/
+
+// Declaring fruits var
+var fruits = require("../hoffman-fruits");
+
+// Declaring char var
+var chai = require("chai");
+
+// Declaring assert var
+var assert = chai.assert;
+
+// Describing specs 
+describe("fruits", function() {
+    //Title of spec
+    it("should return an array of fruits", function() {
+      var f = fruits("Apple,Orange,Mango");
+
+        assert(Array.isArray(f));
+    });
+});
