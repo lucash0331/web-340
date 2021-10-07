@@ -1,0 +1,42 @@
+<!--
+Title: index.ejs
+Author: Lucas Hoffman
+Date: 09/19/2021
+Description: index.ejs file for assignment 6.4
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <!-- Header Module -->
+  <head>
+    <%- include('header'); -%>
+  </head>
+    
+  <body>
+    <!--Navigation Bar Module-->
+    <%- include('navbar'); -%>
+    
+    <!--Main Content-->
+     <main role="main" class="container">
+      <div class="jumbotron text-center">
+         <h1>Exercise 8.4</h1>
+         <p>EMS (Milestone 4): MongoDB Integration</p>
+      </div>
+    
+      <!--Text Section-->
+      <div>
+         <h2 class="mt-5 text-center">Employee Management System</h2>
+         <p class="lead">This tool will enable you to be able to add new employees and verify existing records.
+       <br  />
+      </div>
+    </main>
+    
+  </body>
+  
+<!--Site Footer Module-->
+</div>
+<%- include ('footer'); -%>
+<% include ('scripts') %>
+</div>
+</html>
