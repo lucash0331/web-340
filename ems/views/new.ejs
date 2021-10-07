@@ -1,0 +1,59 @@
+<!--
+Title: new.ejs
+Author: Lucas Hoffman
+Date: 09/19/2021
+Description: new.ejs file for assignment 6.4
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--Site Header Module-->
+  <head>
+    <%- include('header'); -%>
+  </head>
+    
+  <body>
+    <!--Navigation Bar-->
+    <%- include('navbar'); -%>
+    
+   <!--Main Content-->
+   <main role="main" class="container">
+    <div class="jumbotron text-center">
+       <h1>New Employee Page</h1>
+       <p>EMS (Milestone 4): MongoDB Integration</p>
+    </div>
+  
+    <!--Text Section-->
+    <div class="container">
+      <h2 class="text-primary"><%= message %></h2>
+      <form method="post" action="/process">
+          <div class="form-group">
+              <label for="txtFirstName">First Name:</label>
+              <input name="txtFirstName" type="text" id="txtFirstName" name="txtFirstName">
+          </div>
+          <div class="form-group">
+              <label for="txtLasttName">Last Name:</label>
+              <input name="txtLastName" type="text" id="txtLastName" name="txtLastName">
+          </div>
+          <div class="form-group">   
+
+              <!-- CSRF token -->
+              <input name="_csrf" value="<%= csrfToken %>" type="hidden">
+              <button class="btn btn-primary float-right" type="submit">Submit</button>
+          </div>
+      </form>
+  </div>
+  <a href="/">Return</a>
+
+  </main>
+    
+  </body>
+  
+<!--Site Footer Module-->
+</div>
+<%- include ('footer'); -%>
+<% include ('scripts') %>
+
+</div>
+</html>
