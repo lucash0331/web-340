@@ -2,7 +2,7 @@
 Title: app.js
 Author: Lucas Hoffman
 Date: 09/19/2021
-Description: App.js file for assignment 6.4
+Description: App.js file for EMS assignment
 */
 
 //Require statements for express, http, path, helmet, and morgan.
@@ -29,6 +29,9 @@ app.set("views", path.resolve(__dirname, "views"));
 //Telling express to use the ejs view engine
 app.set("view engine", "ejs");
 
+// Assign a port
+app.set("port", process.env.PORT || 8080);
+
 //Use Statements
 app.use(logger("dev"));
 app.use(helmet.xssFilter());
@@ -46,7 +49,7 @@ app.use(function (request, response, next) {
   next();
 });
 
-//ROuting to home page
+//Route to home page
 app.get("/", function (request, response) {
   response.render("index", {
     title: "Home page",
@@ -66,7 +69,7 @@ app.get("/new", function (request, response) {
 app.get("/list", function (request, response) {
   Employee.find({}, function (error, employees) {
     if (error) throw error;
-    res.render("list", {
+    response.render("list", {
       title: "Employee List",
       employees: employees,
     });
@@ -100,15 +103,28 @@ app.post("/process", function (request, response) {
 
   //Save
   employee.save(function (error) {
-    if (error) {
-      console.log(error);
-      throw error;
-    } else {
+    if (error) throw error;
       console.log(firstName + " " + lastName + " Your entry was successfully saved!");
-      res.redirect("/");
+  });
+    response.redirect("/");
+});
+
+//Display Employee Record
+app.get("/view/:queryName", function (request, response) {
+  var queryName = request.params.queryName;
+  Employee.find({ firstName: queryName }, function (error, employees) {
+    if (error) throw error;
+    if (employees.length > 0) {
+      response.render("view", {
+        title: "Employee Record",
+        employee: employees,
+      });
+    } else {
+      response.redirect("/list");
     }
   });
 });
+
 
 //MongoDB Connection Module
 var mongoDB = "mongodb+srv://admin:admin@buwebdev-cluster-1.umga8.mongodb.net/test";
@@ -121,6 +137,6 @@ db.once("open", function () {
 });
 
 //Creates server to listen on port 8080
-http.createServer(app).listen(8080, function () {
-  console.log("Application started on port 8080!");
+http.createServer(app).listen(app.get("port"), function () {
+  console.log("Application started on port + app.get("port"));
 });
